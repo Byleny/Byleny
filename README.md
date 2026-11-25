@@ -1,104 +1,142 @@
-<!-- ░░ HEADER ░░ -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0b1f2a,55:0f766e,100:f4c430&text=Byleny&fontColor=fdf6e3&fontSize=70&fontAlignY=36&desc=Full%20stack%20%C2%B7%20ML%20%C2%B7%20Apps%20que%20resuelven%20cosas%20reales&descSize=18&descAlignY=58&animation=fadeIn" width="100%" alt="Byleny"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:121212,60:3F3AA8,100:4640DE&text=Bylen%20Naspiran&fontColor=FAFAF9&fontSize=62&fontAlignY=36&desc=Software%20real%2C%20impacto%20real.&descSize=22&descAlignY=58&animation=fadeIn" width="100%" alt="Bylen Naspiran · Software real, impacto real."/>
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=900&color=F4C430&center=true&vCenter=true&width=640&lines=Detecto+gastos+raros+con+Isolation+Forest+%F0%9F%92%B8;Armo+parches+de+ciclov%C3%ADa+con+Flutter+%2B+Gemini+%F0%9F%9A%B2;FastAPI+%C2%B7+Next.js+%C2%B7+Docker+%F0%9F%90%B3;Hecho+en+Cali+%F0%9F%87%A8%F0%9F%87%B4" alt="typing"/>
+  <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=21&duration=2800&pause=900&color=F2C230&center=true&vCenter=true&width=660&lines=Desarrollador+de+Software+%C2%B7+Ingenier%C3%ADa+de+Sistemas;Alertas+de+brotes+4+semanas+antes+%F0%9F%A6%9F;Finanzas+personales+con+ML+%F0%9F%92%B8;Un+sitio+en+producci%C3%B3n+para+un+cliente+real+%E2%9A%96%EF%B8%8F" alt="Lo que hago"/>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/📍_Cali,_Colombia-0b1f2a?style=flat-square" />
-  <img src="https://img.shields.io/badge/🏆_Hackathon_Smart_City_Expo_2026-0f766e?style=flat-square" />
-  <img src="https://img.shields.io/badge/🎓_Proyecto_de_tesis:_FinSmart-f4c430?style=flat-square&logoColor=000" />
-  <img src="https://komarev.com/ghpvc/?username=Byleny&style=flat-square&color=0f766e&label=visitas" />
+  <a href="https://byleny.github.io"><img src="https://img.shields.io/badge/Portafolio-byleny.github.io-4640DE?style=for-the-badge&logo=googlechrome&logoColor=FAFAF9"/></a>
+  <a href="https://linkedin.com/in/bylenyesidnaspiranrealpe"><img src="https://img.shields.io/badge/LinkedIn-Bylen%20Naspiran-121212?style=for-the-badge&logo=linkedin&logoColor=F2C230"/></a>
+  <a href="mailto:bylennaspiranr@gmail.com"><img src="https://img.shields.io/badge/Escr%C3%ADbeme-correo-2FBF71?style=for-the-badge&logo=gmail&logoColor=FAFAF9"/></a>
 </p>
 
 ---
 
-### `> whoami`
+### 👋 ¡Hola! Soy Bylen
 
-```ts
-const byleny = {
-  hago:       ["APIs con FastAPI y Node", "frontends en Next.js y React", "apps móviles en Flutter"],
-  ahora:      "FinSmart, mi tesis: finanzas personales con Machine Learning",
-  equipo:     "Dedsec 🟢",
-  meImporta:  ["datos personales bien cuidados", "que el modelo explique lo que ve", "que la app se use de verdad"],
-};
+Estudiante de **Ingeniería de Sistemas** en la Universidad de San Buenaventura, Cali 🇨🇴, y desarrollador de software.
+
+Me gusta construir software real, no solo ejercicios de clase: sistemas completos, de principio a fin, que resuelvan problemas reales, desde sitios web en producción hasta modelos de machine learning para salud pública. Casi siempre trabajo con **Python** y **JavaScript**, y suelo tener varios proyectos de dominios distintos al mismo tiempo, porque me aburre quedarme en uno solo.
+
+```diff
++ Ahora:        FinSmart, mi tesis de pregrado
++ En producción: slestudiojuridico.com, desde enero de 2026
++ Investigo en: el semillero PADIA · software, datos e IA aplicada
++ Me gradúo:    2027
 ```
 
 ---
 
-### 🧪 Lo que estoy construyendo
+### 🧪 Proyectos
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-#### 💸 [FinSmart](https://github.com/Byleny/find-smart)
-Finanzas personales, mi proyecto de tesis: ingresos, gastos, presupuestos, metas de ahorro y gastos compartidos. Consulta facturas de GDO y te lleva a PSE con el valor cargado. **Isolation Forest** marca los gastos inusuales.
+#### 🦟 [SentinelaS](https://byleny.github.io/sentinelas.html)
+**Alerta temprana de brotes epidémicos** para el Valle del Cauca, con un semáforo de riesgo por municipio. El modelo combina HistGradientBoosting con pronósticos de Prophet, entrenado con datos abiertos de datos.gov.co. Antes de entrenar tuve que reconstruir los ceros implícitos en el 87% del panel. Tiene un chat con Gemini que consulta los datos con herramientas.
 
-`FastAPI` `Next.js` `TypeScript` `scikit-learn` `JWT` `Docker`
+`Python` `scikit-learn` `Prophet` `pandas` `Leaflet` `Gemini`
+<br/>🎤 *Presentado en Datos al Ecosistema 2026*
 
 </td>
 <td width="50%" valign="top">
 
-#### 🚲 [Parches CicloVida](https://github.com/Byleny/parches-ciclovida)
-Prototipo TRL 3 del equipo **Dedsec** para el reto CicloVida del Hackathon Smart City Expo Cali 2026. Arma grupos de jóvenes para rodar juntos, con mapa de 11 estaciones, encuestas y un bot de **Gemini con function calling**. Respeta la Ley 1581 de hábeas data.
+#### 💸 [FinSmart](https://github.com/Byleny/finsmart)
+**Mi tesis de pregrado.** Una plataforma de finanzas personales que detecta transacciones recurrentes con ML, marca gastos inusuales con Isolation Forest, consulta facturas por web scraping y te lleva a PSE con el valor ya cargado. Maneja presupuestos, metas de ahorro y gastos compartidos.
 
-`Flutter` `Dart` `FastAPI` `Gemini` `OpenStreetMap`
+`FastAPI` `Next.js` `TypeScript` `scikit-learn` `Docker`
+<br/>🎓 *Proyecto de grado*
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-#### 🃏 [Panini API](https://github.com/Byleny/panini-api)
-API para el álbum **Panini del Mundial 2026**: láminas por país, tu colección, las que te faltan y un sistema de **intercambios** entre usuarios.
+#### ⚖️ [Salgado Fontal & López Zapata](https://slestudiojuridico.com)
+**Cliente real, en producción.** Diseñé y desarrollé el sitio completo del estudio jurídico: bitácora con suscripción por correo y **AURORA**, una plataforma privada donde los clientes inician sesión y siguen su caso. Sigo a cargo del mantenimiento.
 
-`Node.js` `Express` `sql.js`
+`Web` `Producción` `Mantenimiento`
+<br/>🟢 *En vivo desde enero de 2026*
 
 </td>
 <td width="50%" valign="top">
 
-#### 📈 [KNN](https://github.com/Byleny/KNN)
-Clasificador **K-Nearest Neighbors** sobre las canciones más escuchadas de Spotify en 2024 (Kaggle), con balanceo de clases, escalado y reporte de métricas.
+#### 🚲 [Parches CicloVida](https://github.com/Byleny/parches-ciclovida)
+Arma grupos de jóvenes para ir juntos a la CicloVida de Cali. Hace el match automático por hora, estación y actividad, divide los parches con k-means, avisa por Telegram y tiene un bot de Gemini. Cumple la Ley 1581 de hábeas data.
 
-`Python` `Jupyter` `pandas` `scikit-learn` `seaborn`
+`Flutter` `FastAPI` `k-means` `Telegram` `Render`
+<br/>🏆 *Equipo Dedsec · Hackathon Smart City Expo Cali 2026*
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 📡 [PulsoRed](https://byleny.github.io/pulsored.html)
+Monitoreo del wifi público de Cali con **tres agentes de IA**. Cada punto tiene un score de riesgo, se estima cuánto le falta para fallar y cada falla tiene su autopsia. Lo construí solo, y de su pivote nació SentinelaS.
+
+`Python` `Agentes de IA` `Leaflet`
+<br/>🇨🇴 *Hackathon Colombia 5.0 · MinTIC 2025*
+
+</td>
+<td width="50%" valign="top">
+
+#### 🐾 [PetStock](https://byleny.github.io/petstock.html)
+Inventario y ventas para una tienda de mascotas. Tiene un asistente con gpt-4o-mini que responde con el inventario y las últimas ventas, y genera imágenes publicitarias con FLUX.1.
+
+`Next.js` `Express` `Prisma` `OpenAI` `Docker`
+<br/>🛠️ *Proyecto personal*
 
 </td>
 </tr>
 </table>
 
----
-
-### 🛠️ Caja de herramientas
-
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,fastapi,sklearn,nodejs,express&theme=dark" /><br/>
-  <img src="https://skillicons.dev/icons?i=ts,js,nextjs,react,flutter,dart&theme=dark" /><br/>
-  <img src="https://skillicons.dev/icons?i=mongodb,sqlite,docker,git,vscode&theme=dark" />
+  <a href="https://github.com/Byleny/panini-api">🃏 Panini API · Mundial 2026</a> &nbsp;·&nbsp;
+  <a href="https://github.com/Byleny/KNN">🎧 ¿Es explícita esta canción? KNN vs. Naive Bayes</a>
 </p>
 
 ---
 
-### 📊 En números
+### 📄 Investigación
+
+> **"A Comparative Approach to Search Algorithms for Path Planning in Mobile Robots: A\* vs. Minimum Path Sum"**
+> Autor · VIII Congreso Internacional **AmITIC** · Neiva, 2025
+> Comparamos A\* y suma mínima de caminos en laberintos virtuales y físicos, con un robot real. [Ver ponencia →](https://byleny.github.io/amitic.html)
+
+---
+
+### 🛠️ Stack
+
+| | |
+|---|---|
+| **Backend y datos** | <img src="https://skillicons.dev/icons?i=python,fastapi,nodejs,express,sqlite&theme=light" height="34"/> &nbsp; `pandas` |
+| **Frontend** | <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,tailwind,flutter&theme=light" height="34"/> &nbsp; `Leaflet` `Chart.js` |
+| **ML y visión** | <img src="https://skillicons.dev/icons?i=sklearn,pytorch,tensorflow&theme=light" height="34"/> &nbsp; `Prophet` `YOLO` `ResNet-50` |
+| **IA generativa** | `Claude` `Gemini` `OpenAI API` `Hugging Face` `Copilot` `Cursor` |
+| **Herramientas** | <img src="https://skillicons.dev/icons?i=git,github,gitlab,docker&theme=light" height="34"/> &nbsp; `Jupyter` |
+
+**Certificaciones:** IA Generativa: Ingeniería de Instrucciones (IBM, 2025) · Habilidades Interpersonales (IBM, 2025) · Cybersecurity and Cloud Fundamentals (Fortinet) · Ciberseguridad (HTB Academy)
+
+---
+
+### 📊 Actividad
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Byleny&show_icons=true&hide_border=true&bg_color=0b1f2a&title_color=f4c430&icon_color=2dd4bf&text_color=fdf6e3&include_all_commits=true&rank_icon=github" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Byleny&layout=compact&hide_border=true&bg_color=0b1f2a&title_color=f4c430&text_color=fdf6e3&langs_count=6" />
-</p>
-
-<p align="center">
-  <img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=Byleny&bg_color=0b1f2a&color=fdf6e3&line=f4c430&point=2dd4bf&area=true&area_color=0f766e&hide_border=true&custom_title=Ritmo%20de%20commits" />
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=Byleny&show_icons=true&hide_border=true&bg_color=FAFAF9&title_color=4640DE&icon_color=F2C230&text_color=121212&include_all_commits=true&rank_icon=github"/>
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Byleny&layout=compact&hide_border=true&bg_color=FAFAF9&title_color=4640DE&text_color=121212&langs_count=6"/>
 </p>
 
 ---
 
 <p align="center">
-  <i>"Si no lo usa nadie, es una tarea. Si lo usa alguien, es un producto."</i>
+  <b>¿Tienes un proyecto en mente? ✦ Hablemos.</b><br/>
+  <sub>Abierto a nuevos proyectos y colaboraciones en desarrollo de software, sistemas y datos.</sub>
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=0:f4c430,55:0f766e,100:0b1f2a" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=100&section=footer&color=0:4640DE,60:3F3AA8,100:121212" width="100%"/>
 </p>

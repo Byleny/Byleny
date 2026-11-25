@@ -368,8 +368,8 @@ def ilus_finsmart(s, t):
                    f'class="a" style="transform-origin:bottom;animation:grow .7s cubic-bezier(.2,.8,.2,1) {.3+i*.08:.2f}s backwards"/>')
     bx = x0 + 6 + 5 * 23 + 8
     out.append(f'<g class="a" {loop("bob", 2.4)}><g transform="rotate(-6 {bx} {y0-6})">')
-    s.usos.setdefault("CV", set()).update("¡raro!")
-    out.append(f'<text x="{bx-30}" y="{y0-4}" font-family="CV" font-size="26" fill="{RED}">¡raro!</text>')
+    s.usos.setdefault("CV", set()).update("anomalía")
+    out.append(f'<text x="{bx-78}" y="{y0-4}" font-family="CV" font-size="26" fill="{RED}">anomalía</text>')
     out.append("</g></g>")
     return "".join(out)
 
@@ -448,7 +448,7 @@ PROYECTOS = {
                    "0,954", "AUC · VALIDADO EN 16 AÑOS", ["Python", "sklearn", "Gemini"], ilus_sentinelas),
     "finsmart": ("FINANZAS PERSONALES · ML", GOLD, INK, "Proyecto de grado", "FinSmart",
                  ["Recurrentes, gastos inusuales y facturas", "de GDO con pago directo por PSE."],
-                 "Tesis", "ISOLATION FOREST + FASTAPI", ["FastAPI", "Next.js", "Docker"], ilus_finsmart),
+                 "2 modelos", "ISOLATION FOREST + DBSCAN", ["FastAPI", "Next.js", "Docker"], ilus_finsmart),
     "estudio": ("CLIENTE REAL · WEB", GREEN, INK, "En vivo desde ene 2026", "Estudio jurídico",
                 ["Sitio, bitácora con suscripción y AURORA:", "el portal donde los clientes siguen su caso."],
                 "En vivo", "SLESTUDIOJURIDICO.COM", ["Web", "Producción"], ilus_estudio),
@@ -457,7 +457,7 @@ PROYECTOS = {
                 "3 apps", "EN VIVO EN RENDER", ["Flutter", "FastAPI", "k-means"], ilus_parches),
     "petstock": ("GESTIÓN + IA GENERATIVA", INDIGO, PAPER, "Proyecto personal", "PetStock",
                  ["Inventario y ventas con un asistente que", "conoce la tienda y crea su publicidad."],
-                 "2 IA", "GPT-4O-MINI + FLUX.1", ["Next.js", "Express", "Prisma"], ilus_petstock),
+                 "4 módulos", "DASHBOARD · INVENTARIO · VENTAS · IA", ["Next.js", "Express", "Prisma"], ilus_petstock),
     "pulsored": ("WIFI PÚBLICO · AGENTES", GOLD, INK, "Hackathon Colombia 5.0", "PulsoRed",
                  ["Score de riesgo por punto wifi, tiempo", "estimado a la falla y autopsia de cada caída."],
                  "3", "AGENTES DE IA · MINTIC 2025", ["Python", "Leaflet"], ilus_pulsored),
@@ -704,7 +704,7 @@ def main():
     os.makedirs(SALIDA, exist_ok=True)
     piezas = {
         "hero": hero, "cifras": cifras, "portafolio": portafolio, "trayectoria": trayectoria, "stack": stack, "cierre": cierre,
-        "h-proyectos": lambda t: encabezado(t, "01", "PROYECTOS", "Lo que he construido", "toca una tarjeta"),
+        "h-proyectos": lambda t: encabezado(t, "01", "PROYECTOS", "Lo que he construido", "de la idea a producción"),
         "h-trayectoria": lambda t: encabezado(t, "02", "TRAYECTORIA", "De dónde vengo", "¡y lo que viene!"),
         "h-stack": lambda t: encabezado(t, "03", "STACK", "Con qué lo construyo", "Python y JS, casi siempre"),
         "mini-panini": lambda t: mini(t, "NODE.JS · API REST", "Panini API · Mundial 2026",

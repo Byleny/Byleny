@@ -18,14 +18,14 @@
 
 <p align="center">
   <a href="https://github.com/Byleny/sentinelas"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/p-sentinelas-dark.svg"><img src="assets/p-sentinelas-light.svg" width="49%" alt="SentinelaS: alerta temprana de brotes epidémicos, AUC 0,954"></picture></a>
-  <a href="https://github.com/Byleny/finsmart"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/p-finsmart-dark.svg"><img src="assets/p-finsmart-light.svg" width="49%" alt="FinSmart: finanzas personales con ML, mi tesis"></picture></a>
+  <a href="https://github.com/Byleny/finsmart"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/p-finsmart-dark.svg"><img src="assets/p-finsmart-light.svg" width="49%" alt="FinSmart: finanzas personales con 2 modelos de ML, mi tesis"></picture></a>
 </p>
 <p align="center">
   <a href="https://slestudiojuridico.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/p-estudio-dark.svg"><img src="assets/p-estudio-light.svg" width="49%" alt="Estudio jurídico Salgado Fontal & López Zapata: sitio y portal AURORA en producción"></picture></a>
   <a href="https://github.com/Byleny/parches-ciclovida"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/p-parches-dark.svg"><img src="assets/p-parches-light.svg" width="49%" alt="Parches CicloVida: 3 apps en vivo, Smart City Expo Cali 2026"></picture></a>
 </p>
 <p align="center">
-  <a href="https://github.com/Byleny/petstock"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/p-petstock-dark.svg"><img src="assets/p-petstock-light.svg" width="49%" alt="PetStock: inventario con asistente gpt-4o-mini y publicidad con FLUX.1"></picture></a>
+  <a href="https://github.com/Byleny/petstock"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/p-petstock-dark.svg"><img src="assets/p-petstock-light.svg" width="49%" alt="PetStock: 4 módulos, asistente gpt-4o-mini y publicidad con FLUX.1"></picture></a>
   <a href="https://devbyleny.vercel.app/pulsored.html"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/p-pulsored-dark.svg"><img src="assets/p-pulsored-light.svg" width="49%" alt="PulsoRed: monitoreo de wifi público con 3 agentes de IA"></picture></a>
 </p>
 <p align="center">

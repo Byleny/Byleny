@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://byleny.github.io"><img src="https://img.shields.io/badge/Portafolio-byleny.github.io-4640DE?style=for-the-badge&logo=googlechrome&logoColor=FAFAF9"/></a>
+  <a href="https://devbyleny.vercel.app"><img src="https://img.shields.io/badge/Portafolio-devbyleny.vercel.app-4640DE?style=for-the-badge&logo=googlechrome&logoColor=FAFAF9"/></a>
   <a href="https://linkedin.com/in/bylenyesidnaspiranrealpe"><img src="https://img.shields.io/badge/LinkedIn-Bylen%20Naspiran-121212?style=for-the-badge&logo=linkedin&logoColor=F2C230"/></a>
   <a href="mailto:bylennaspiranr@gmail.com"><img src="https://img.shields.io/badge/Escr%C3%ADbeme-correo-2FBF71?style=for-the-badge&logo=gmail&logoColor=FAFAF9"/></a>
 </p>
@@ -75,7 +75,7 @@ Arma grupos de jóvenes para ir juntos a la CicloVida de Cali. Hace el match aut
 <tr>
 <td width="50%" valign="top">
 
-#### 📡 [PulsoRed](https://byleny.github.io/pulsored.html)
+#### 📡 [PulsoRed](https://devbyleny.vercel.app/pulsored.html)
 Monitoreo del wifi público de Cali con **tres agentes de IA**. Cada punto tiene un score de riesgo, se estima cuánto le falta para fallar y cada falla tiene su autopsia. Lo construí solo, y de su pivote nació SentinelaS.
 
 `Python` `Agentes de IA` `Leaflet`
@@ -105,7 +105,7 @@ Inventario y ventas para una tienda de mascotas. Tiene un asistente con gpt-4o-m
 
 > **"A Comparative Approach to Search Algorithms for Path Planning in Mobile Robots: A\* vs. Minimum Path Sum"**
 > Autor · VIII Congreso Internacional **AmITIC** · Neiva, 2025
-> Comparamos A\* y suma mínima de caminos en laberintos virtuales y físicos, con un robot real. [Ver ponencia →](https://byleny.github.io/amitic.html)
+> Comparamos A\* y suma mínima de caminos en laberintos virtuales y físicos, con un robot real. [Ver ponencia →](https://devbyleny.vercel.app/amitic.html)
 
 ---
 

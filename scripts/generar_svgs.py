@@ -587,6 +587,108 @@ def cierre(t):
     return s
 
 
+# ───────────────────────────────────────────────────────────── PORTAFOLIO
+def portafolio(t):
+    W, H = 1200, 590
+    s = SVG(W, H, t)
+    s.add(f'<defs><pattern id="d3" width="22" height="22" patternUnits="userSpaceOnUse">'
+          f'<circle cx="2" cy="2" r="1.4" fill="{t["dot"]}" opacity="{t["dotop"]}"/></pattern>'
+          f'<clipPath id="pantalla"><rect x="50" y="118" width="640" height="400" rx="4"/></clipPath></defs>')
+    s.add(s.caja(2, 2, 1186, 576, t["bg"], r=30, sombra=10))
+    s.add(f'<rect x="2" y="2" width="1186" height="576" rx="30" fill="url(#d3)"/>')
+
+    # navegador con recorrido por el sitio
+    carpeta = os.path.join(RAIZ, "scripts", "capturas")
+    fotos = sorted(f for f in os.listdir(carpeta) if f.endswith(".jpg"))
+    secciones = [f.split("-", 1)[1][:-4] for f in fotos]
+    n = len(fotos)
+    s.add(f'<g class="a" {anim("up", .8)}><g transform="rotate(-1.2 370 320)">')
+    s.add(s.caja(36, 64, 668, 470, t["card"], r=18, sombra=9))
+    s.add(f'<line x1="36" y1="108" x2="704" y2="108" stroke="{t["line"]}" stroke-width="2.5"/>')
+    for i, c in enumerate([RED, GOLD, GREEN]):
+        s.add(f'<circle cx="{62+i*20}" cy="86" r="6.5" fill="{c}" stroke="{t["line"]}" stroke-width="1.5"/>')
+    s.add(s.caja(140, 73, 480, 26, t["soft"], r=13, sw=1.8, sombra=0))
+    s.text(158, 91, "devbyleny.vercel.app", "JB7", 13.5, t["fg"])
+    base_w = ancho("devbyleny.vercel.app", "JB7", 13.5)
+    hold, mov = 2.6, .7
+    paso = hold + mov
+    total = paso * n
+    # barra de direcciones sincronizada con cada sección
+    for i, sec in enumerate(secciones):
+        ini, fin = i * paso / total * 100, (i * paso + hold + mov * .5) / total * 100
+        if i == 0:
+            kf = f"0%,{fin:.2f}%{{opacity:1}}{fin+.01:.2f}%,{100 - mov*.5/total*100:.2f}%{{opacity:0}}100%{{opacity:1}}"
+        else:
+            kf = (f"0%,{ini - mov*.5/total*100:.2f}%{{opacity:0}}{ini - mov*.5/total*100 + .01:.2f}%,{fin:.2f}%{{opacity:1}}"
+                  f"{fin+.01:.2f}%,100%{{opacity:0}}")
+        s.css.append(f"@keyframes url{i}{{{kf}}}")
+        etiqueta = "" if sec == "top" else f"/#{sec}"
+        if etiqueta:
+            s.add(f'<g style="animation:url{i} {total:.1f}s linear infinite;opacity:{1 if i == 0 else 0}">')
+            s.text(158 + base_w, 91, etiqueta, "JB5", 13.5, t["accent"])
+            s.add("</g>")
+    s.add(f'<g clip-path="url(#pantalla)">')
+    pasos = []
+    for i in range(n):
+        a, b = i * paso / total * 100, (i * paso + hold) / total * 100
+        pasos.append(f"{a:.2f}%,{b:.2f}%{{transform:translateY({-400*i}px)}}")
+    pasos.append(f"100%{{transform:translateY({-400*n}px)}}")
+    s.css.append("@keyframes recorrido{" + "".join(pasos) + "}")
+    s.add(f'<g style="animation:recorrido {total:.1f}s cubic-bezier(.7,0,.3,1) infinite">')
+    for i, f in enumerate(fotos + fotos[:1]):
+        with open(os.path.join(carpeta, f), "rb") as fh:
+            b64 = base64.b64encode(fh.read()).decode()
+        s.add(f'<image x="50" y="{118 + i*400}" width="640" height="400" href="data:image/jpeg;base64,{b64}"/>')
+    s.add("</g></g>")
+    s.add(f'<rect x="50" y="118" width="640" height="400" rx="4" fill="none" stroke="{t["line"]}" stroke-width="1.5"/>')
+    s.add("</g></g>")
+
+    # invitación
+    x = 760
+    s.add(f'<g class="a" {anim("fade", .5, .2)}>')
+    s.pill(x, 62, "04 / PORTAFOLIO", "JB7", 13, t["accent"], PAPER if t is TEMAS["light"] else INK, sombra=3)
+    s.add("</g>")
+    s.add(f'<g class="a" {anim("up", .7, .3)}>')
+    s.text(x - 2, 160, "¿Quieres", "SG7", 50, t["fg"], ls=-1.5)
+    s.text(x - 2, 214, "conocerme más?", "SG7", 50, t["fg"], ls=-1.5)
+    s.add("</g>")
+    s.add(f'<g class="a" {anim("pop", .6, .7)}><g transform="rotate(-6 1060 110)">')
+    s.text(1010, 114, "¡entra aquí!", "CV", 30, t["accent"])
+    s.add("</g></g>")
+    items = [("Cada proyecto a fondo, con video", INDIGO), ("Mi CV en español e inglés", GOLD),
+             ("Dónde he trabajado y qué estudio", GREEN), ("Quién soy fuera del código", LIME)]
+    for i, (it, c) in enumerate(items):
+        y = 262 + i * 46
+        s.add(f'<g class="a" {anim("up", .5, .6 + i * .12)}>')
+        s.add(s.caja(x, y - 21, 28, 28, c, r=8, sw=2, sombra=3))
+        col = PAPER if c == INDIGO else INK
+        s.add(f'<path d="M{x+7} {y-7} l5 5 l9 -10" fill="none" stroke="{col}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>')
+        s.text(x + 44, y, it, "SG5", 19, t["fg"])
+        s.add("</g>")
+    # botón con cursor que lo pulsa
+    label = "Entrar al portafolio"
+    bw = ancho(label, "SG7", 23) + 96
+    by = 448
+    s.css.append("@keyframes clic{0%,62%,100%{transform:translate(0,0)}70%{transform:translate(5px,5px)}78%{transform:translate(0,0)}}"
+                 "@keyframes cursor{0%{transform:translate(150px,90px);opacity:0}15%{opacity:1}55%,80%{transform:translate(0,0);opacity:1}"
+                 "66%{transform:translate(0,0) scale(.85)}100%{transform:translate(0,0);opacity:0}}"
+                 "@keyframes onda{0%,64%{transform:scale(0);opacity:0}66%{transform:scale(.2);opacity:.9}90%,100%{transform:scale(1.6);opacity:0}}")
+    s.add(f'<rect x="{x+5}" y="{by+5}" width="{bw}" height="66" rx="33" fill="{t["shadow"]}" class="a" {anim("fade", .6, 1.1)}/>')
+    s.add(f'<g class="a" {anim("pop", .6, 1.1)}><g style="animation:clic 3.6s ease-in-out 1.6s infinite">')
+    s.add(s.caja(x, by, bw, 66, GOLD, r=33, sombra=0))
+    s.text(x + 28, by + 41, label, "SG7", 23, INK)
+    s.add(f'<circle cx="{x+bw-33}" cy="{by+33}" r="21" fill="{INK}"/>')
+    s.add(flecha(x + bw - 40, by + 26, 14, GOLD, 3))
+    s.add("</g></g>")
+    cx, cy = x + bw - 64, by + 46
+    s.add(f'<circle cx="{cx}" cy="{cy-8}" r="26" fill="none" stroke="{t["accent"]}" stroke-width="3" class="a" '
+          f'style="animation:onda 3.6s ease-out 1.6s infinite;opacity:0"/>')
+    s.add(f'<g style="animation:cursor 3.6s ease-in-out 1.6s infinite;opacity:0"><g transform="translate({cx-8} {cy-14})">'
+          f'<path d="M0 0 L0 30 L8 23 L14 36 L20 33 L14 21 L25 21 Z" fill="{PAPER}" stroke="{INK}" stroke-width="2.5" stroke-linejoin="round"/></g></g>')
+    s.text(x + 4, 556, "devbyleny.vercel.app", "JB5", 14, t["muted"])
+    return s
+
+
 # ───────────────────────────────────────────────────────────── BOTONES
 def boton(t, label, fill, col):
     w = ancho(label, "SG7", 22) + 96
@@ -601,7 +703,7 @@ def boton(t, label, fill, col):
 def main():
     os.makedirs(SALIDA, exist_ok=True)
     piezas = {
-        "hero": hero, "cifras": cifras, "trayectoria": trayectoria, "stack": stack, "cierre": cierre,
+        "hero": hero, "cifras": cifras, "portafolio": portafolio, "trayectoria": trayectoria, "stack": stack, "cierre": cierre,
         "h-proyectos": lambda t: encabezado(t, "01", "PROYECTOS", "Lo que he construido", "toca una tarjeta"),
         "h-trayectoria": lambda t: encabezado(t, "02", "TRAYECTORIA", "De dónde vengo", "¡y lo que viene!"),
         "h-stack": lambda t: encabezado(t, "03", "STACK", "Con qué lo construyo", "Python y JS, casi siempre"),

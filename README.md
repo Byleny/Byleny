@@ -51,6 +51,12 @@
 
 <br/>
 
+<a href="https://devbyleny.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/portafolio-dark.svg"><img src="assets/portafolio-light.svg" width="100%" alt="¿Quieres conocerme más? Entra a mi portafolio: cada proyecto a fondo con video, mi CV en español e inglés, dónde he trabajado y quién soy fuera del código."></picture></a>
+
+<p align="center"><b>👉 <a href="https://devbyleny.vercel.app">devbyleny.vercel.app</a></b> · proyectos en detalle, CV para descargar y más de mí</p>
+
+<br/>
+
 <a href="mailto:bylennaspiranr@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cierre-dark.svg"><img src="assets/cierre-light.svg" width="100%" alt="¿Tienes un proyecto en mente? Hablemos."></picture></a>
 
 <p align="center">

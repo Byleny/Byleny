@@ -35,10 +35,10 @@ Me gusta construir software real, no solo ejercicios de clase: sistemas completo
 <tr>
 <td width="50%" valign="top">
 
-#### 🦟 [SentinelaS](https://byleny.github.io/sentinelas.html)
-**Alerta temprana de brotes epidémicos** para el Valle del Cauca, con un semáforo de riesgo por municipio. El modelo combina HistGradientBoosting con pronósticos de Prophet, entrenado con datos abiertos de datos.gov.co. Antes de entrenar tuve que reconstruir los ceros implícitos en el 87% del panel. Tiene un chat con Gemini que consulta los datos con herramientas.
+#### 🦟 [SentinelaS](https://github.com/Byleny/sentinelas)
+**Alerta temprana de brotes epidémicos** para el Valle del Cauca, 4 semanas antes, con un semáforo de riesgo por municipio. Usa 6 fuentes de datos.gov.co. El clasificador autorregresivo llega a **AUC 0,954**, validado en 16 años, y le ganó a Prophet (0,748). Antes de entrenar tuve que reconstruir los ceros implícitos en el 87% del panel. Tiene un chat con Gemini que consulta los datos con herramientas.
 
-`Python` `scikit-learn` `Prophet` `pandas` `Leaflet` `Gemini`
+`Python` `scikit-learn` `pandas` `Leaflet` `Gemini` `Docker`
 <br/>🎤 *Presentado en Datos al Ecosistema 2026*
 
 </td>
@@ -84,7 +84,7 @@ Monitoreo del wifi público de Cali con **tres agentes de IA**. Cada punto tiene
 </td>
 <td width="50%" valign="top">
 
-#### 🐾 [PetStock](https://byleny.github.io/petstock.html)
+#### 🐾 [PetStock](https://github.com/Byleny/petstock)
 Inventario y ventas para una tienda de mascotas. Tiene un asistente con gpt-4o-mini que responde con el inventario y las últimas ventas, y genera imágenes publicitarias con FLUX.1.
 
 `Next.js` `Express` `Prisma` `OpenAI` `Docker`
